@@ -1,0 +1,25 @@
+body, p, li, th, td, div{
+    font-family : 'Montserrat', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family : 'B612 Mono', monospace;
+}
+section{
+    padding-top: 50px;
+}
+
+main{
+    background: url(../images/letterboxes.jpg);
+    background-attachment: fixed;
+    background-size: cover; 
+    min-height: 90vh;
+}
+
+.textbox{
+    padding: 20px;
+    background : rgba(255, 255, 255, .85);
+}
+
+label{
+    margin-bottom: 0;
+}

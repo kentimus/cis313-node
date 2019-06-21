@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+    
+  <%
+    const mailtypes = {
+        'stamped' :  'Letters (Stamped)',
+        'metered' : 'Letters (Metered)',
+        'flats'   : 'Large Envelopes (Flats)',
+        'package' : 'First-Class Package Service—Retail (zones 1 &amp; 2)'
+    };
+  %>
+
+    <main>
+        <section class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="textbox">
+                            <h1>Show rates!</h1>
+                            
+                            <% if(error != null){ %>
+                            <div class="alert alert-danger">
+                                <p><strong><%= error %></strong></p>
+                                
+                                <table class="table">
+                                    <tr>
+                                        <td>Mail Type:</td>
+                                        <td><%= mailtypes[mailtype] %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight:</td>
+                                        <td><%= weight %> oz.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <% } else { %>
+                            <div class="alert alert-success">
+                                <table class="table">
+                                    <tr>
+                                        <td>Mail Type:</td>
+                                        <td><%= mailtypes[mailtype] %></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight:</td>
+                                        <td><%= weight %> oz.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rate:</td>
+                                        <td>$<%= rate.toFixed(2) %></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <% } %>
+                            
+                            <p><a href="/rateform.html" class="btn btn-primary">Get More Rates!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<% include ../partials/footer.ejs %>
+</body>
+</html>

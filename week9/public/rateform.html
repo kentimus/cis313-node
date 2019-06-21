@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postal Rate Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/stylesheets/getpostal.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Kent's Fancy Postal Rate Calculator</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/rateform.html">Get Postal Rates</a>
+      </li>
+      
+      
+    </ul>
+    
+  </div>
+</nav>
+
+
+    <main>
+        <section class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="textbox">
+                            <h1>Yeah! Here is the Rate Form!</h1>
+                        
+                            <form method="get" action="/show-rate">
+                              <div class="form-group">
+                                <label for="input-weight">Weight</label>
+                                <input type="text" class="form-control" id="input-weight" name="weight" placeholder="Enter weight (in ounces)">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Mail Type</label>
+                                    <select class="form-control" id="mailtype" name="mailtype">
+                                        <option value="stamped">Letters (Stamped)</option>
+                                        <option value="metered">Letters (Metered)</option>
+                                        <option value="flats">Large Envelopes (Flats)</option>
+                                        <option value="package">First-Class Package Service—Retail (zones 1 &amp; 2)</option>
+                                  </select>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Let's get that rate!</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="textbox">
+                            <h2>Some fun facts about this rate form:</h2>
+                        
+                            <p>This rate form is being served as a static file!</p>
+
+                            <p>Why? Who knows? Probably to prove that I can do it. It's a bad idea, though. What if I want to change the navigation? It would be so much smarter to use ejs here.</p>
+
+                            <h3>What else is cool?</h3>
+
+                            <p>Legally using this <a href="https://unsplash.com/photos/8Zs5H6CnYJo" target="_blank">stock photo</a> as a background.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
